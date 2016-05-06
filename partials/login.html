@@ -1,0 +1,110 @@
+
+            <div class="page_top_wrap page_top_title page_top_breadcrumbs sc_pt_st1">
+                <div class="content_wrap">
+                    <div class="breadcrumbs">
+                        <a class="breadcrumbs_item home" href="index.html">Home</a>
+                        <span class="breadcrumbs_delimiter"></span>
+                        <span class="breadcrumbs_item current">Sign In</span>
+                    </div>
+                    <h1 class="page_title">Sign In</h1>
+                </div>
+            </div>
+            <!-- /Page title -->
+            <!-- Content without sidebar -->
+            <div class="page_content_wrap">
+                <div class="content">
+                    <article class="post_item post_item_single page">
+                        <section class="post_content">
+                            <!-- Info section -->
+                            <div class="sc_section accent_top bg_tint_light sc_bg1" >
+                                <div class="sc_section_overlay">
+                                    <div class="sc_section_content">
+                                        <div class="sc_content content_wrap margin_top_2_5em_imp margin_bottom_2_5em_imp">
+                                            <div class="row-fluid">
+                                                <div class="col-sm-4 center-block panel p-lg">
+                                                    <form role="form"  novalidate="" class="form-horizontal p-lg">
+                                   <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="login">        
+                                            <div class="form-group has-feedback" id="Emaildiv_id">
+                                                <input  type="text" id="email" placeholder="Enter email id" autocomplete="off"  required="required" class="form-control" />
+                                                <span class="glyphicon glyphicon-user form-control-feedback text-muted"></span>
+                                            </div>
+                                            <div class="form-group has-feedback" id="Passworddiv_id">
+                                                <input  type="password" id="password" placeholder="Password" required="required" class="form-control" />
+                                                <span class="glyphicon glyphicon-lock form-control-feedback text-muted"></span>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="pull-right">
+                                                    <a href="#forgot" class="text-muted small" aria-controls="forgot" role="tab" data-toggle="tab">Forgot your password?</a>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="button"  id="btnuserLogin" class="btn btn-block sc_button sc_button_style_filled sc_buttons_st5 ">Login</button>
+                                            </div>                                  
+                                            <div class="clearfix">
+                                                <div class="alt-sign text-muted text-sm">
+                                                    <hr class="divider-hr"/>
+                                                    <sapn class="div-text small">Or sign in with</sapn>
+                                                </div>
+                                            </div> 
+                                            <div class="row-fluid text-center form-group mt">
+                                                <div class="col-sm-6 mb-lg p0">
+                                                    <a  href="/auth/facebook" class="facebook">
+                                                        <i class="fa fa-facebook"></i>&nbsp;  Facebook
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-6 p0">
+                                                      <a  href="/auth/google" class="google">
+                                                        <i class="fa fa-google"></i>  Google</a>
+                                                </div>
+                                            </div>
+
+                                      
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="forgot">
+                                
+                                            <small class="text-center ">Fill with your mail to receive instructions on how to reset your password.</small>
+                                            <div class="form-group has-feedback">
+                                                <input  type="email" id="Email" name="email" placeholder="Enter email"
+                                                autocomplete="off" class="form-control" required />
+                                                <span class="glyphicon glyphicon-envelope form-control-feedback text-muted"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="button" id="resetrequest" class="btn sc_button sc_button_style_filled sc_buttons_st5 btn-block">Reset</button>
+                                            </div>
+                                    </div>
+                                
+                                </div>
+                                                     
+                                
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Info section -->
+                        </section>
+                    </article>
+                </div>
+            </div>
+            <!-- /Content without sidebar -->
+<script >
+var token=localStorage.getItem('accessToken');
+console.log(token);
+if(token==null)
+{
+
+      $(".menu_user_controls").hide();
+      $(".btn-link").show();
+      $(".menu_user_logout").show();
+}
+else
+{
+    $(".menu_user_controls").show();
+    $(".btn-link").hide();
+    $(".menu_user_logout").hide();
+    
+}
+</script>

@@ -1,0 +1,135 @@
+
+
+
+
+
+
+         
+     <!-- Page title -->
+            <div class="page_top_wrap page_top_title page_top_breadcrumbs sc_pt_st1">
+                
+            </div>
+            <!-- /Page title -->
+            <!-- Content without sidebar -->
+            <div class="page_content_wrap">
+                <div class="content"  id="content">
+                    <article class="post_item post_item_single page">
+                        <section class="post_content">
+                            <!-- Info section -->
+                            <div class="sc_section accent_top bg_tint_light sc_bg1">
+                                <div class="sc_section_overlay">
+                                    <div class="sc_section_content">
+                                        <div class="sc_content content_wrap margin_top_2_5em_imp margin_bottom_2_5em_imp">
+                                            <h2 class="sc_title sc_title_regular sc_align_center margin_top_0 margin_bottom_085em text_center">Why you are here?</h2>
+                                            <div class="row">
+                                                <div class="col-sm-6 text-center br">
+                                                    <h5>I'm here to learn</h5>
+                                                    <img src="icons/ic_school_black.svg" class="img-fluid center-block signup-img">
+                                                    <div>Find proffesional teachers online</div>
+                                                    <div class="form-group">Get Personal Tution</div>
+                                                    <a class="btn btn-info sc_button sc_button_style_filled btn-raised" href="#AddStudent">Start Learning</a>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <h5>I'm here to teach</h5>
+                                                    <img src="icons/ic_business_center.svg" class="img-fluid center-block signup-img">
+                                                    <div>Grow your knowledge and skills</div>
+                                                    <div class="form-group">Get paid for yor expertise</div>
+                                                    <a class="btn btn-info sc_button sc_button_style_filled btn-raised" href="#AddTutor" >Become a Tutor</a>
+                                                </div>
+                                            </div>
+
+
+
+
+                                             <div class="row1">
+                                                <div class="col-sm-6 text-center br">
+                                                    <h5>Add New Admin</h5>
+                                                    <img src="icons/ic_school_black.svg" class="img-fluid center-block signup-img">
+                                                     
+                                                   
+                                                    <a class="btn btn-info sc_button sc_button_style_filled btn-raised" href="#AdminRegistration">ADD ADMIN</a>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <h5>View All Admin</h5>
+                                                    <img src="icons/ic_business_center.svg" class="img-fluid center-block signup-img">
+                                                    
+                                                   
+                                                    <a class="btn btn-info sc_button sc_button_style_filled btn-raised" href="#ViewAdmin" >VIEW ADMIN</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                             <div class="row2">
+                                                <div class="col-sm-6 text-center br">
+                                                    <h5>Add New Student</h5>
+                                                 <!--    <img src="icons/ic_school_black.svg" class="img-fluid center-block signup-img"> -->
+                                                     
+                                                   
+                                                    <a class="btn btn-default btn-info sc_button sc_button_style_filled btn-raised " href="#AddStudent">ADD STUDENT</a>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <h5>Add New Tutor</h5>
+                                                    <!-- <img src="icons/ic_business_center.svg" class="img-fluid center-block signup-img"> -->
+                                                    
+                                                   
+                                                    <a class="btn btn-default sc_button sc_button_style_filled btn-raised" href="#AddTutor" >ADD TUTOR</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Info section -->
+                           
+
+                        </section>
+                    </article>
+                </div>
+            </div>
+            <!-- /Content without sidebar -->
+
+ 
+
+ 
+ 
+<script>
+ var type=localStorage.getItem('UserType');
+
+    
+   
+ if(type=='root')
+ {
+   
+   $(".row").hide();
+    $(".row1").show();
+     $(".row2").hide();
+  
+ }
+ else if(type=='student'||type=='tutor')
+
+ {
+ $(".row").show();
+  $(".row1").hide();
+   $(".row2").hide();
+ }
+ else if(type=='admin')
+ {
+ $(".row2").show();
+  $(".row1").hide();
+   $(".row").hide();
+ }
+ else
+ {
+
+ $(".row").show();
+  $(".row1").hide();
+   $(".row2").hide();
+
+ }
+ </script>
