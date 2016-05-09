@@ -1,0 +1,31 @@
+<div class="page_content_wrap page_top_wrap">
+    <div class="modal fade confirmPayment" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="confirmDialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- form code -->
+                    <div id="div_id">
+                        <form id="frmid" method="post" name="form1" action="https://sandbox.citruspay.com/sslperf/erudopayment">
+                            <input type="hidden" id="merchantTxnId" name="merchantTxnId" value="" />
+                            <input id="orderAmount" name="orderAmount" type="hidden" value="1" readonly />
+                            <input type="hidden" id="currency" name="currency" value="INR" />
+                            <input id="returnUrl" type="hidden" name="returnUrl" />
+                            <input type="hidden" id="secSignature" name="secSignature" value="" />
+                            <p class="lead">Confirm Payment</p>
+                            <h2>&#x20B9; 1</h2>
+                            <button type="sbmit" class="btn btn-primary btn-raised">Make Payment</button>
+                        </form>
+                    </div>
+                    <!-- end of  form code -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $('.confirmPayment').modal('show');
+</script>

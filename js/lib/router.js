@@ -12,16 +12,19 @@ define(function(require) {
 		// Define routes
 		routes: {
 			"": "home",
+			"Home": "home",
+			"tutorsall": "tutors",
 			"tutors": "projects",
 			"about-us": "about",
 			"contact-us": "contact",
 			"view-tutors": "tutors",
-			"advantages": "advantages",
+			"Advantages": "advantages",
 			"login": "login",
 			"register": "register",
 			"course": "course",
 			"feedback": "feedback",
 			"tables": "tables",
+			"makepayment": "makepayment",
 		  },
 
 
@@ -36,6 +39,7 @@ define(function(require) {
 				var view1 = new rtlView({el: content});
 				view1.render();
 				loadIndex();
+				$('.menu_main_nav_area ul').addClass('hide');
 				$('ul#guest').removeClass('hide');
 			});
 		},
@@ -53,13 +57,17 @@ define(function(require) {
 				var view1 = new rtlView({el: content});
 				view1.render();
 				loadTheme();
+				$('.menu_main_nav_area ul').addClass('hide');
+				$('ul#admin').removeClass('hide');
 			});
 		},
 		tutors:function(){
 			require(["views/tutors"], function (rtlView) {
 				var view1 = new rtlView({el: content});
 				view1.render();
-				loadTheme();
+				loadTheme();				
+				$('.menu_main_nav_area ul').addClass('hide');
+				$('ul#tutor').removeClass('hide');
 			});
 		},
 		advantages:function(){
@@ -67,6 +75,8 @@ define(function(require) {
 				var view1 = new rtlView({el: content});
 				view1.render();
 				loadTheme();
+				$('.menu_main_nav_area ul').addClass('hide');
+				$('ul#guest').removeClass('hide');
 			});
 		},
 		login:function(){
@@ -100,6 +110,13 @@ define(function(require) {
 		},
 		tables:function(){
 			require(["views/tables"], function (rtlView) {
+				var view1 = new rtlView({el: content});
+				view1.render();
+				loadTheme();
+			});
+		},
+		makepayment:function(){
+			require(["views/makepayment"], function (rtlView) {
 				var view1 = new rtlView({el: content});
 				view1.render();
 				loadTheme();

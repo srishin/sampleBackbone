@@ -1,505 +1,747 @@
 <style type="text/css">
-  .carousel {
+.carousel {
     margin-bottom: 60px;
     margin-left: 0px;
     margin-right: 0px;
-  }
+}
 
-  .carousel .container {
+.carousel .container {
     position: relative;
     z-index: 9;
-  }
-  .carousel .item {
+}
+
+.carousel .item {
     height: 96vh;
     overflow: hidden;
-  }
-
- .carousel-caption {
-  background-color: transparent;
-  position: static;
-  padding: 0 20px;
-  margin-top: 200px;
 }
+
+.carousel-caption {
+    background-color: transparent;
+    position: static;
+    padding: 0 20px;
+    margin-top: 200px;
+}
+
 .carousel-caption h1,
 .carousel-caption .lead {
-  margin: 0;
-  line-height: 1.25;
-  color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    margin: 0;
+    line-height: 1.25;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
 }
-.carousel-inner .item{ background-size: cover;}
-.carousel-inner .item:nth-child(1){background-image: url(images/blue.jpg);}
-.carousel-inner .item:nth-child(2){background-image: url(images/green.jpg);}
-.carousel-inner .item:nth-child(3){background-image: url(images/yellow.jpg);}
-.carousel-caption .title{animation-delay:1s;}
-.carousel-caption .lead{animation-delay:2s;}
-.carousel-caption .slide_button{animation-delay:3s;display: inline-block;}
-.carousel-indicators .active{background-color:#018763 }
-.carousel-indicators li{border:1px solid #018763;}
+
+.carousel-inner .item {
+    background-size: cover;
+}
+
+.carousel-inner .item:nth-child(1) {
+    background-image: url(images/blue.jpg);
+}
+
+.carousel-inner .item:nth-child(2) {
+    background-image: url(images/green.jpg);
+}
+
+.carousel-inner .item:nth-child(3) {
+    background-image: url(images/yellow.jpg);
+}
+
+.carousel-caption .title {
+    animation-delay: 1s;
+}
+
+.carousel-caption .lead {
+    animation-delay: 2s;
+}
+
+.carousel-caption .slide_button {
+    animation-delay: 3s;
+    display: inline-block;
+}
+
+.carousel-indicators .active {
+    background-color: #018763
+}
+
+.carousel-indicators li {
+    border: 1px solid #018763;
+}
+
 @media (max-width: 767px) {
-  .carousel .item {
-    height: 60vh;
-  }
-  .carousel-caption {
-    padding: 0px;
-    margin-top: 126px;
-  }
-  .tp-caption.title{font-size: 36px;white-space: normal;}
+    .carousel .item {
+        height: 60vh;
+    }
+    .carousel-caption {
+        padding: 0px;
+        margin-top: 126px;
+    }
+    .tp-caption.title {
+        font-size: 36px;
+        white-space: normal;
+    }
 }
+
+.courseWrapper {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+}
+
+.course {
+    display: inline-block;
+    background: #fff;
+    margin: 0 0 1.5em;
+    width: 100%;
+    background: #FFF;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 2px 2px 4px 0 #ccc;
+    border-radius: 10px;
+}
+
+@media(max-width: 480px) {
+    .courseWrapper {
+        -moz-column-count: 1;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 20px;
+        column-count: 1;
+    }
+}
+
+@media(max-width: 360px) {
+    .courseWrapper {
+        -moz-column-count: 1;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 20px;
+        column-count: 1;
+    }
+}
+
+.course .courseTitle {
+    line-height: 21px;
+    color: #fff;
+    margin: 0px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+   height: 55px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.courseTitle a{color: #FFF;}
+.courseTitle {
+    background-color: #1eaace;
+}
+
+.course:nth-child(4n+2) .courseTitle{
+    background-color: #1dbb90;
+}
+
+.course:nth-child(4n+3) .courseTitle{
+    background-color: #ffb20e;
+}
+.course .courseFooter a{color:#1eaace;font-weight: 600;text-transform: capitalize;}
+.course:nth-child(4n+2) .courseFooter a{color:#1dbb90;}
+.course:nth-child(4n+3) .courseFooter a{color:#ffb20e;}
+.cTitle {
+    white-space: nowrap;
+    width: 80px;
+    display: inline-block;
+}
+
+.course p {
+    margin: 0px;
+}
+
+.course .course_price_value {
+    font-size: 1.3846em;
+    color: #222;
+    line-height: 1.3em;
+}
+
+.course_price_period:before {
+    content: '/';
+    display: inline-block;
+    margin: 0 .5em;
+}
+
+.courseFooter span {
+    vertical-align: middle;
+    margin-top: 10px;
+    display: inline-block;
+}
+.courseFooter, .courseDetails{padding: 4px 10px;}
+.courseDetails{border-bottom: 1px solid #1eaace}
+.course:nth-child(4n+2) .courseDetails{border-bottom: 1px solid #1dbb90}
+.course:nth-child(4n+3) .courseDetails{border-bottom: 1px solid #ffb20e}
+.courseDetails label{color: #000;}
+.courseFooter button{color: #FFF;text-transform: capitalize;}
+
+@media(max-width: 768px) {
+    .courseWrapper {
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+    }
+}
+
+
+/*@media(max-width: 768px) {
+    .courseWrapper {
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+    }
+}*/
 </style>
 <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
-  <div class="carousel-inner">
-
-
-    <div class="item active" data-animation="animated bounceInDown" >
-      <div class="container">
-        <div class="carousel-caption row">
-         <div class="col-xs-9 col-sm-9 text-center mt-lg pt-lg">
-          <div class="tp-caption title" data-animation="animated bounceInLeft">Welcome to Erudo        
-           <p class="lead" data-animation="animated bounceInRight"> Advanced  tuition portal </p>           
-          </div>
-         
-          <span class="tp-caption slide_button  tp-resizeme mt-lg" data-animation="animated zoomInUp">
+    <div class="carousel-inner">
+        <div class="item active" data-animation="animated bounceInDown">
+            <div class="container">
+                <div class="carousel-caption row">
+                    <div class="col-xs-9 col-sm-9 text-center mt-lg pt-lg">
+                        <div class="tp-caption title" data-animation="animated bounceInLeft">Welcome to Erudo
+                            <p class="lead" data-animation="animated bounceInRight"> Advanced tuition portal </p>
+                        </div>
+                        <span class="tp-caption slide_button  tp-resizeme mt-lg" data-animation="animated zoomInUp">
            <a href="#" class="slide_button_white">Start Learning Now</a>
          </span>
-       </div>       
-         <div class="col-xs-3 col-sm-3 mt-lg pt-lg">
-          <img src="images/erudologo.png" alt="logo" data-animation="animated zoomInUp" data-speed="1300" width="200">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 mt-lg pt-lg">
+                        <img src="images/erudologo.png" alt="logo" data-animation="animated zoomInUp" data-speed="1300" width="200">
+                    </div>
+                </div>
+            </div>
         </div>
-       
-     </div>
-   </div>
- </div>
-
- <div class="item">
-  <div class="container">
-    <div class="carousel-caption">
-     <div  class="tp-caption title" data-animation="animated bounceInLeft">Learn Online</div>
-     <p class="lead mb-lg" data-animation="animated bounceInLeft">
-      <span class="font-w_400">Online Education leads the world in distance education with high quality online degrees and online courses.</span>
-    </p>
-    <span class="tp-caption slide_button tp-resizeme mt-lg" data-animation="animated bounceInDown">
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="tp-caption title" data-animation="animated bounceInLeft">Learn Online</div>
+                    <p class="lead mb-lg" data-animation="animated bounceInLeft">
+                        <span class="font-w_400">Online Education leads the world in distance education with high quality online degrees and online courses.</span>
+                    </p>
+                    <span class="tp-caption slide_button tp-resizeme mt-lg" data-animation="animated bounceInDown">
      <a href="#" class="slide_button_white">Start Learning Now</a>
    </span>
- </div>
-</div>
-</div>
-
-<div class="item" data-animation="animated bounceInLeft" >
-  <div class="container">
-    <div class="carousel-caption">
-      <div class="tp-caption title" data-animation="animated bounceInRight">Personalized Coaching</div>
-      <p class="lead font-w_400 mb-lg"  data-animation="animated bounceInRight">Learning is a collaborative process, and we're here to provide you with guidance every step of the way.</p>
-      <span class="tp-caption slide_button  tp-resizeme" data-animation="animated fadeIn">
+                </div>
+            </div>
+        </div>
+        <div class="item" data-animation="animated bounceInLeft">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="tp-caption title" data-animation="animated bounceInRight">Personalized Coaching</div>
+                    <p class="lead font-w_400 mb-lg" data-animation="animated bounceInRight">Learning is a collaborative process, and we're here to provide you with guidance every step of the way.</p>
+                    <span class="tp-caption slide_button  tp-resizeme" data-animation="animated fadeIn">
         <a href="#" class="slide_button_white">Find Personalized Courses</a>
       </span>
-    </div>
-  </div>
-</div>
-
-</div>
-<ol class="carousel-indicators">
- <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
- <li data-target="#myCarousel" data-slide-to="1"></li>
- <li data-target="#myCarousel" data-slide-to="2"></li>
-</ol>
-
-</div><!-- /.carousel -->
-
-
-
-<div class="page_content_wrap">
-  <div class="content">
-    <article class="post_item post_item_single page">
-      <section class="post_content">
-        <!-- Features section -->
-        <div class="sc_section" data-animation="animated zoomIn normal">
-          <div class="sc_content content_wrap margin_top_3em_imp margin_bottom_3em_imp sc_features_st1">
-            <div class="columns_wrap sc_columns columns_fluid sc_columns_count_3">
-              <div class="column-1_3 sc_column_item sc_column_item_1 odd first text_center">
-                <a href="#" ><img src="images/logo.png"> </a>
-                <div class="sc_section font-w_400 margin_top_1em_imp">
-                  <p>
-                    <a class="menu_color" href="#">Login to erudo<br />
-                    </a>
-                  </p>
                 </div>
-              </div>
-              <div class="column-1_3 sc_column_item sc_column_item_2 even text_center">
-                <a href="#"><img src="images/x1.png"> </a>
-                <div class="sc_section font-w_400 margin_top_1em_imp">
-                  <p>
-                    <a class="menu_color" href="#">Find best tutors across the world</a>
-                  </p>
-                </div>
-              </div>
-              <div class="column-1_3 sc_column_item sc_column_item_3 odd text_center">
-                <a href="#" ><img src="images/erudoteacher.png"></a>
-                <div class="sc_section font-w_400 margin_top_1em_imp">
-                  <p>
-                    <a class="menu_color" href="#">Start learning
-                    </a>
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-        <!-- /Features section -->          
-        <!-- Courses section -->
-        <div class="sc_section accent_top bg_tint_light sc_bg1" data-animation="animated fadeInUp normal">
-          <div class="sc_section_overlay">
-            <div class="sc_section_content">
-              <div class="sc_content content_wrap margin_top_2_5em_imp margin_bottom_2_5em_imp">
-                <h2 class="sc_title sc_title_regular sc_align_center margin_top_0 margin_bottom_085em text_center">Courses you may looking for</h2>
-                <div class="sc_blogger layout_courses_3 template_portfolio sc_blogger_horizontal no_description">
-                  <div class="isotope_wrap" data-columns="3">
-                    <!-- Courses item -->
-                    <div class="isotope_item isotope_item_courses isotope_column_3">
-                      <div class="post_item post_item_courses odd">
-                        <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
-                          <div class="post_featured img">
-                            <h4 class="post_title">
+    </div>
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+</div>
+<!-- /.carousel -->
+<div class="page_content_wrap">
+    <div class="content">
+        <article class="post_item post_item_single page">
+            <section class="post_content">
+                <!-- Features section -->
+                <div class="sc_section" data-animation="animated zoomIn normal">
+                    <div class="sc_content content_wrap margin_top_3em_imp margin_bottom_3em_imp sc_features_st1">
+                        <div class="columns_wrap sc_columns columns_fluid sc_columns_count_3">
+                            <div class="column-1_3 sc_column_item sc_column_item_1 odd first text_center">
+                                <a href="#"><img src="images/logo.png"> </a>
+                                <div class="sc_section font-w_400 margin_top_1em_imp">
+                                    <p>
+                                        <a class="menu_color" href="#">Login to erudo<br />
+                    </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="column-1_3 sc_column_item sc_column_item_2 even text_center">
+                                <a href="#"><img src="images/x1.png"> </a>
+                                <div class="sc_section font-w_400 margin_top_1em_imp">
+                                    <p>
+                                        <a class="menu_color" href="#">Find best tutors across the world</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="column-1_3 sc_column_item sc_column_item_3 odd text_center">
+                                <a href="#"><img src="images/erudoteacher.png"></a>
+                                <div class="sc_section font-w_400 margin_top_1em_imp">
+                                    <p>
+                                        <a class="menu_color" href="#">Start learning
+                    </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Features section -->
+                <article class="container courseWrapper">
+                <!-- courese -->   <!-- courese -->
+                    <div class="course">
+                        <h4 class="courseTitle"><a href="free-course.html">Evaluating Social Programs</a></h4>
+                        <div class="courseDetails">
+                            <p>
+                                <label class="cTitle">Class</label>: 10</p>
+                            <p>
+                                <label class="cTitle">Syllabus</label>: ICSE</p>
+                            <p>
+                                <label class="cTitle">Duration</label>: 30Hrs</p>
+                            <p>
+                                <label class="cTitle">Starts On</label>: 13/05/2016</p>
+                                 <p>
+                                <label class="cTitle">Type</label>: One To One</p>
+                        </div>
+                        <div class="courseFooter">
+                            <div class="row ph-lg text-right">
+                                <a class="pull-left pv" href="">Enroll Now</a >
+                                <span class="course_price_value">&#x20B9;85</span>
+                                <span class="course_price_period">monthly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of course -->  <!-- courese -->
+                    <div class="course">
+                        <h4 class="courseTitle"><a href="free-course.html">Evaluating Social Programs</a></h4>
+                        <div class="courseDetails">
+                            <p>
+                                <label class="cTitle">Class</label>: 10</p>
+                            <p>
+                                <label class="cTitle">Syllabus</label>: ICSE</p>
+                            <p>
+                                <label class="cTitle">Duration</label>: 30Hrs</p>
+                            <p>
+                                <label class="cTitle">Starts On</label>: 13/05/2016</p>
+                        </div>
+                        <div class="courseFooter">
+                            <div class="row ph-lg text-right">
+                                <a class="pull-left pv" href="">Enroll Now</a >
+                                <span class="course_price_value">&#x20B9;85</span>
+                                <span class="course_price_period">monthly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of course -->  <!-- courese -->
+                    <div class="course">
+                        <h4 class="courseTitle"><a href="free-course.html">Evaluating Social Programs</a></h4>
+                        <div class="courseDetails">
+                            <p>
+                                <label class="cTitle">Class</label>: 10</p>
+                            <p>
+                                <label class="cTitle">Syllabus</label>: ICSE</p>
+                            <p>
+                                <label class="cTitle">Duration</label>: 30Hrs</p>
+                            <p>
+                                <label class="cTitle">Starts On</label>: 13/05/2016</p>
+                        </div>
+                        <div class="courseFooter">
+                            <div class="row ph-lg text-right">
+                                <a class="pull-left pv" href="">Enroll Now</a >
+                                <span class="course_price_value">&#x20B9;85</span>
+                                <span class="course_price_period">monthly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of course -->  <!-- courese -->
+                    <div class="course">
+                        <h4 class="courseTitle"><a href="free-course.html">Evaluating Social Programs</a></h4>
+                        <div class="courseDetails">
+                            <p>
+                                <label class="cTitle">Class</label>: 10</p>
+                            <p>
+                                <label class="cTitle">Syllabus</label>: ICSE</p>
+                            <p>
+                                <label class="cTitle">Duration</label>: 30Hrs</p>
+                            <p>
+                                <label class="cTitle">Starts On</label>: 13/05/2016</p>
+                        </div>
+                        <div class="courseFooter">
+                            <div class="row ph-lg text-right">
+                                <a class="pull-left pv" href="">Enroll Now</a >
+                                <span class="course_price_value">&#x20B9;85</span>
+                                <span class="course_price_period">monthly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of course -->  <!-- courese -->
+                    <div class="course">
+                        <h4 class="courseTitle"><a href="free-course.html">Evaluating Social Programs</a></h4>
+                        <div class="courseDetails">
+                            <p>
+                                <label class="cTitle">Class</label>: 10</p>
+                            <p>
+                                <label class="cTitle">Syllabus</label>: ICSE</p>
+                            <p>
+                                <label class="cTitle">Duration</label>: 30Hrs</p>
+                            <p>
+                                <label class="cTitle">Starts On</label>: 13/05/2016</p>
+                        </div>
+                        <div class="courseFooter">
+                            <div class="row ph-lg text-right">
+                                <a class="pull-left pv" href="">Enroll Now</a >
+                                <span class="course_price_value">&#x20B9;85</span>
+                                <span class="course_price_period">monthly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of course -->  
+                </article>
+                <!-- Courses section -->
+                <div class="sc_section accent_top bg_tint_light sc_bg1" data-animation="animated fadeInUp normal">
+                    <div class="sc_section_overlay">
+                        <div class="sc_section_content">
+                            <div class="sc_content content_wrap margin_top_2_5em_imp margin_bottom_2_5em_imp">
+                                <h2 class="sc_title sc_title_regular sc_align_center margin_top_0 margin_bottom_085em text_center">Courses you may looking for</h2>
+                                <div class="sc_blogger layout_courses_3 template_portfolio sc_blogger_horizontal no_description">
+                                    <div class="isotope_wrap" data-columns="3">
+                                        <!-- Courses item -->
+                                        <div class="isotope_item isotope_item_courses isotope_column_3">
+                                            <div class="post_item post_item_courses odd">
+                                                <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
+                                                    <div class="post_featured img">
+                                                        <h4 class="post_title">
                               <a href="paid-course.html">Principles of Written English, Part 2</a>
                             </h4>
-                            <div class="post_descr">
-                            <img src="images/default-profile.jpg" class="img-circle">
-                              <div class="post_price">
-                                <span class="post_price_value">&#x20B9;85</span>
-                                <span class="post_price_period">monthly</span>
-                              </div>
-                              <div class="post_category">
-                                <a href="product-category.html">Language</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="post_info_wrap info">
-                            <div class="info-back">
-                              <h4 class="post_title">
+                                                        <div class="post_descr">
+                                                            <img src="images/default-profile.jpg" class="img-circle">
+                                                            <div class="post_price">
+                                                                <span class="post_price_value">&#x20B9;85</span>
+                                                                <span class="post_price_period">monthly</span>
+                                                            </div>
+                                                            <div class="post_category">
+                                                                <a href="product-category.html">Language</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post_info_wrap info">
+                                                        <div class="info-back">
+                                                            <h4 class="post_title">
                                 <a href="paid-course.html">Principles of Written English, Part 2</a>
                               </h4>
-                              <div class="post_descr">
-                                <p>
-                                  <a href="paid-course.html">Nam id leo massa. Cras at condimentum nisi, vulputate ultrices turpis.</a>
-                                </p>
-                                <div class="post_buttons">
-                                  <div class="post_button">
-                                    <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
-                                  </div>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /Courses item -->
-                    <!-- Courses item -->
-                    <div class="isotope_item isotope_item_courses isotope_column_3">
-                      <div class="post_item post_item_courses even">
-                        <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
-                          <div class="post_featured img">
-                            <a href="paid-course.html">
-                              <img alt="" src="http://placehold.it/400x400">
-                            </a>
-                            <h4 class="post_title">
+                                                            <div class="post_descr">
+                                                                <p>
+                                                                    <a href="paid-course.html">Nam id leo massa. Cras at condimentum nisi, vulputate ultrices turpis.</a>
+                                                                </p>
+                                                                <div class="post_buttons">
+                                                                    <div class="post_button">
+                                                                        <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Courses item -->
+                                        <!-- Courses item -->
+                                        <div class="isotope_item isotope_item_courses isotope_column_3">
+                                            <div class="post_item post_item_courses even">
+                                                <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
+                                                    <div class="post_featured img">
+                                                        <a href="paid-course.html">
+                                                            <img alt="" src="http://placehold.it/400x400">
+                                                        </a>
+                                                        <h4 class="post_title">
                               <a href="paid-course.html">Entrepreneurship 101: Who is your customer?</a>
                             </h4>
-                            <div class="post_descr">
-                              <div class="post_price">
-                                <span class="post_price_value">&#x20B9;195</span><span class="post_price_period">monthly</span>
-                              </div>
-                              <div class="post_category">
-                                <a href="product-category.html">Marketing</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="post_info_wrap info">
-                            <div class="info-back">
-                              <h4 class="post_title">
+                                                        <div class="post_descr">
+                                                            <div class="post_price">
+                                                                <span class="post_price_value">&#x20B9;195</span><span class="post_price_period">monthly</span>
+                                                            </div>
+                                                            <div class="post_category">
+                                                                <a href="product-category.html">Marketing</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post_info_wrap info">
+                                                        <div class="info-back">
+                                                            <h4 class="post_title">
                                 <a href="paid-course.html">Entrepreneurship 101:  Who is your customer?</a>
                               </h4>
-                              <div class="post_descr">
-                                <p>
-                                  <a href="paid-course.html">Quisque a nulla eget ante vestibulum lacinia eu quis massa.</a>
-                                </p>
-                                <div class="post_buttons">
-                                  <div class="post_button">
-                                    <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
-                                  </div>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /Courses item -->
-                    <!-- Courses item -->
-                    <div class="isotope_item isotope_item_courses isotope_column_3">
-                      <div class="post_item post_item_courses odd">
-                        <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
-                          <div class="post_featured img">
-                            <a href="free-course.html">
-                              <img alt="" src="http://placehold.it/400x400">
-                            </a>
-                            <h4 class="post_title">
+                                                            <div class="post_descr">
+                                                                <p>
+                                                                    <a href="paid-course.html">Quisque a nulla eget ante vestibulum lacinia eu quis massa.</a>
+                                                                </p>
+                                                                <div class="post_buttons">
+                                                                    <div class="post_button">
+                                                                        <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Courses item -->
+                                        <!-- Courses item -->
+                                        <div class="isotope_item isotope_item_courses isotope_column_3">
+                                            <div class="post_item post_item_courses odd">
+                                                <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
+                                                    <div class="post_featured img">
+                                                        <a href="free-course.html">
+                                                            <img alt="" src="http://placehold.it/400x400">
+                                                        </a>
+                                                        <h4 class="post_title">
                               <a href="#">Evaluating Social Programs</a>
                             </h4>
-                            <div class="post_descr">
-                              <div class="post_price">
-                                <span class="post_price_value">Free!</span>
-                              </div>
-                              <div class="post_category">
-                                <a href="product-category.html">Social</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="post_info_wrap info">
-                            <div class="info-back">
-                              <h4 class="post_title">
+                                                        <div class="post_descr">
+                                                            <div class="post_price">
+                                                                <span class="post_price_value">Free!</span>
+                                                            </div>
+                                                            <div class="post_category">
+                                                                <a href="product-category.html">Social</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post_info_wrap info">
+                                                        <div class="info-back">
+                                                            <h4 class="post_title">
                                 <a href="free-course.html">Evaluating Social  Programs</a>
                               </h4>
-                              <div class="post_descr">
-                                <p>
-                                  <a href="#">Nunc finibus vestibulum dui a fringilla. Maecenas maximus in massa sit amet maximus.</a>
-                                </p>
-                                <div class="post_buttons">
-                                  <div class="post_button">
-                                    <a href="free-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /Courses item -->
-                    <!-- Courses item -->
-                    <div class="isotope_item isotope_item_courses isotope_column_3">
-                      <div class="post_item post_item_courses even">
-                        <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
-                          <div class="post_featured img">
-                            <h4 class="post_title">
+                                                            <div class="post_descr">
+                                                                <p>
+                                                                    <a href="#">Nunc finibus vestibulum dui a fringilla. Maecenas maximus in massa sit amet maximus.</a>
+                                                                </p>
+                                                                <div class="post_buttons">
+                                                                    <div class="post_button">
+                                                                        <a href="free-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Courses item -->
+                                        <!-- Courses item -->
+                                        <div class="isotope_item isotope_item_courses isotope_column_3">
+                                            <div class="post_item post_item_courses even">
+                                                <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
+                                                    <div class="post_featured img">
+                                                        <h4 class="post_title">
                               <a href="#">Principles of Written English, Part 1</a>
                             </h4>
-                            <div class="post_descr">
-                              <div class="post_price">
-                                <span class="post_price_value">&#x20B9;85</span>
-                              </div>
-                              <div class="post_category">
-                                <a href="product-category.html">Language</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="post_info_wrap info">
-                            <div class="info-back">
-                              <h4 class="post_title">
+                                                        <div class="post_descr">
+                                                            <div class="post_price">
+                                                                <span class="post_price_value">&#x20B9;85</span>
+                                                            </div>
+                                                            <div class="post_category">
+                                                                <a href="product-category.html">Language</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post_info_wrap info">
+                                                        <div class="info-back">
+                                                            <h4 class="post_title">
                                 <a href="paid-course.html">Principles of Written English, Part 1</a>
                               </h4>
-                              <div class="post_descr">
-                                <p>
-                                  <a href="paid-course.html">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</a>
-                                </p>
-                                <div class="post_buttons">
-                                  <div class="post_button">
-                                    <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
-                                  </div>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /Courses item -->
-                    <!-- Courses item -->
-                    <div class="isotope_item isotope_item_courses isotope_column_3">
-                      <div class="post_item post_item_courses odd">
-                        <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
-                          <div class="post_featured img">
-                            <a href="paid-course.html">
-                              <img alt="" src="http://placehold.it/400x400"></a>
-                              <h4 class="post_title">
+                                                            <div class="post_descr">
+                                                                <p>
+                                                                    <a href="paid-course.html">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</a>
+                                                                </p>
+                                                                <div class="post_buttons">
+                                                                    <div class="post_button">
+                                                                        <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Courses item -->
+                                        <!-- Courses item -->
+                                        <div class="isotope_item isotope_item_courses isotope_column_3">
+                                            <div class="post_item post_item_courses odd">
+                                                <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
+                                                    <div class="post_featured img">
+                                                        <a href="paid-course.html">
+                                                            <img alt="" src="http://placehold.it/400x400"></a>
+                                                        <h4 class="post_title">
                                 <a href="paid-course.html">Introduction to Biomedical Imaging</a>
                               </h4>
-                              <div class="post_descr">
-                                <div class="post_price">
-                                  <span class="post_price_value">&#x20B9;400</span>
-                                </div>
-                                <div class="post_category">
-                                  <a href="product-category.html">Medicine</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="post_info_wrap info">
-                              <div class="info-back">
-                                <h4 class="post_title">
+                                                        <div class="post_descr">
+                                                            <div class="post_price">
+                                                                <span class="post_price_value">&#x20B9;400</span>
+                                                            </div>
+                                                            <div class="post_category">
+                                                                <a href="product-category.html">Medicine</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post_info_wrap info">
+                                                        <div class="info-back">
+                                                            <h4 class="post_title">
                                   <a href="paid-course.html">Introduction to Biomedical Imaging</a>
                                 </h4>
-                                <div class="post_descr">
-                                  <p><a href="paid-course.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-                                  <div class="post_buttons">
-                                    <div class="post_button">
-                                      <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
-                                    </div>
-
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /Courses item -->
-                      <!-- Courses item -->
-                      <div class="isotope_item isotope_item_courses isotope_column_3">
-                        <div class="post_item post_item_courses even last">
-                          <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
-                            <div class="post_featured img">
-                              <a href="paid-course.html">
-                                <img alt="" src="http://placehold.it/400x400">
-                              </a>
-                              <h4 class="post_title">
+                                                            <div class="post_descr">
+                                                                <p><a href="paid-course.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+                                                                <div class="post_buttons">
+                                                                    <div class="post_button">
+                                                                        <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Courses item -->
+                                        <!-- Courses item -->
+                                        <div class="isotope_item isotope_item_courses isotope_column_3">
+                                            <div class="post_item post_item_courses even last">
+                                                <div class="post_content isotope_item_content ih-item colored square effect_dir left_to_right">
+                                                    <div class="post_featured img">
+                                                        <a href="paid-course.html">
+                                                            <img alt="" src="http://placehold.it/400x400">
+                                                        </a>
+                                                        <h4 class="post_title">
                                 <a href="paid-course.html">Introduction to Computer  Science</a>
                               </h4>
-                              <div class="post_descr">
-                                <div class="post_price">
-                                  <span class="post_price_value">&#x20B9;120</span>
-                                  <span class="post_price_period">monthly</span>
-                                </div>
-                                <div class="post_category">
-                                  <a href="product-category.html">Computers</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="post_info_wrap info">
-                              <div class="info-back">
-                                <h4 class="post_title">
+                                                        <div class="post_descr">
+                                                            <div class="post_price">
+                                                                <span class="post_price_value">&#x20B9;120</span>
+                                                                <span class="post_price_period">monthly</span>
+                                                            </div>
+                                                            <div class="post_category">
+                                                                <a href="product-category.html">Computers</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post_info_wrap info">
+                                                        <div class="info-back">
+                                                            <h4 class="post_title">
                                   <a href="paid-course.html">Introduction to Computer  Science</a>
                                 </h4>
-                                <div class="post_descr">
-                                  <p><a href="paid-course.html">Sed interdum felis diam, vitae rutrum urna laoreet vehicula.</a></p>
-                                  <div class="post_buttons">
-                                    <div class="post_button">
-                                      <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
+                                                            <div class="post_descr">
+                                                                <p><a href="paid-course.html">Sed interdum felis diam, vitae rutrum urna laoreet vehicula.</a></p>
+                                                                <div class="post_buttons">
+                                                                    <div class="post_button">
+                                                                        <a href="paid-course.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_small">ENROLL</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Courses item -->
                                     </div>
-
-                                  </div>
                                 </div>
-                              </div>
+                                <div class="text-center">
+                                    <a href="courses-streampage.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_menu sc_button_size_small  sc_button_iconed icon-graduation margin_top_1em margin_bottom_4">VIEW ALL COURSES</a>
+                                </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
-                      <!-- /Courses item -->
                     </div>
-                  </div>
-                  <div class="text-center">
-                    <a href="courses-streampage.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_menu sc_button_size_small  sc_button_iconed icon-graduation margin_top_1em margin_bottom_4">VIEW ALL COURSES</a>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- /Courses section -->
-          <!-- Video training section -->         
-          <div class="sc_line sc_line_style_solid margin_top_0 margin_bottom_0"></div>
-          <div class="sc_section" data-animation="animated fadeInUp normal">
-            <div class="sc_content content_wrap margin_top_2_5em_imp margin_bottom_2_5em_imp ">
-              <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_2">
-                <div class="column-1_2 sc_column_item sc_column_item_1 odd first res_width_100per_imp">
-                  <h3 class="sc_title sc_title_iconed sc_align_left text_left">
+                <!-- /Courses section -->
+                <!-- Video training section -->
+                <div class="sc_line sc_line_style_solid margin_top_0 margin_bottom_0"></div>
+                <div class="sc_section" data-animation="animated fadeInUp normal">
+                    <div class="sc_content content_wrap margin_top_2_5em_imp margin_bottom_2_5em_imp ">
+                        <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_2">
+                            <div class="column-1_2 sc_column_item sc_column_item_1 odd first res_width_100per_imp">
+                                <h3 class="sc_title sc_title_iconed sc_align_left text_left">
                     <span ></span>
                     How Erudo works?
                   </h3>
-                  <p>Mauris vitae quam ligula. In tincidunt sapien sed nibh scelerisque congue. Maecenas ut libero eu metus tincidunt lobortis. Duis accumsan at mauris vel lacinia.</p>
-                  <a href="courses-streampage.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_mini sc_button_iconed inherit margin_top_1em margin_bottom_4 margin_left_4">BROWSE COURSES</a>
-                </div>
-                <div class="column-1_2 sc_column_item sc_column_item_2 even res_width_100per_imp">
-                  <div class="sc_video_player sc_video_bordered sc_video_st1">
-                    <div class="sc_video_frame sc_video_play_button hover_icon hover_icon_play width_100per" data-width="100%" data-height="647" data-video="&lt;iframe class=&quot;video_frame&quot; src=&quot;http://youtube.com/embed/636Dp8eHWnM?autoplay=1&quot; width=&quot;100%&quot; height=&quot;647&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;">
-                      <img alt="" src="http://placehold.it/400x225">
+                                <p>Mauris vitae quam ligula. In tincidunt sapien sed nibh scelerisque congue. Maecenas ut libero eu metus tincidunt lobortis. Duis accumsan at mauris vel lacinia.</p>
+                                <a href="courses-streampage.html" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_mini sc_button_iconed inherit margin_top_1em margin_bottom_4 margin_left_4">BROWSE COURSES</a>
+                            </div>
+                            <div class="column-1_2 sc_column_item sc_column_item_2 even res_width_100per_imp">
+                                <div class="sc_video_player sc_video_bordered sc_video_st1">
+                                    <div class="sc_video_frame sc_video_play_button hover_icon hover_icon_play width_100per" data-width="100%" data-height="647" data-video="&lt;iframe class=&quot;video_frame&quot; src=&quot;http://youtube.com/embed/636Dp8eHWnM?autoplay=1&quot; width=&quot;100%&quot; height=&quot;647&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;">
+                                        <img alt="" src="http://placehold.it/400x225">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- /Video training section -->                        
-
-        </section>
-      </article>
+                <!-- /Video training section -->
+            </section>
+        </article>
     </div>
-  </div>
-
-
-
-
-  <footer class="testimonials_wrap sc_section bg_tint_dark post_ts_bg3">
+</div>
+<footer class="testimonials_wrap sc_section bg_tint_dark post_ts_bg3">
     <div class="sc_section_overlay" data-bg_color="#1eaace" data-overlay="0">
-      <div class="content_wrap">
-        <!-- Testimonials section -->
-        <div class="sc_testimonials sc_slider_swiper swiper-slider-container sc_slider_nopagination sc_slider_controls sc_slider_height_fixed aligncenter height_12em width_100per" data-old-height="12em" data-interval="7000">
-          <div class="slides swiper-wrapper">
-            <div class="swiper-slide height_12em width_100per" data-style="width:100%;height:12em;">
-              <div class="sc_testimonial_item">
-                <div class="sc_testimonial_avatar">
-                  <img alt="" src="http://placehold.it/70x70"></div>
-                  <div class="sc_testimonial_content">
-                    <p>Best purchase i made in envato. Great Theme!</p>
-                  </div>
-                  <div class="sc_testimonial_author">
-                    <a href="#">Sarah Jefferson</a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide height_12em width_100per" data-style="width:100%;height:12em;">
-                <div class="sc_testimonial_item">
-                  <div class="sc_testimonial_avatar">
-                    <img alt="" src="http://placehold.it/70x70"></div>
-                    <div class="sc_testimonial_content">
-                      <p>Thank you for all your help and assistance over the years with our products.
-                        <br /> I would have no hesitation in recommending you to my clients.</p>
-                      </div>
-                      <div class="sc_testimonial_author">
-                        <a href="#">David Anderson</a>
-                      </div>
+        <div class="content_wrap">
+            <!-- Testimonials section -->
+            <div class="sc_testimonials sc_slider_swiper swiper-slider-container sc_slider_nopagination sc_slider_controls sc_slider_height_fixed aligncenter height_12em width_100per" data-old-height="12em" data-interval="7000">
+                <div class="slides swiper-wrapper">
+                    <div class="swiper-slide height_12em width_100per" data-style="width:100%;height:12em;">
+                        <div class="sc_testimonial_item">
+                            <div class="sc_testimonial_avatar">
+                                <img alt="" src="http://placehold.it/70x70"></div>
+                            <div class="sc_testimonial_content">
+                                <p>Best purchase i made in envato. Great Theme!</p>
+                            </div>
+                            <div class="sc_testimonial_author">
+                                <a href="#">Sarah Jefferson</a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide height_12em width_100per" data-style="width:100%;height:12em;">
-                    <div class="sc_testimonial_item">
-                      <div class="sc_testimonial_content">
-                        <div class="sc_number aligncenter margin_bottom_1_5em">
-                          <span class="sc_number_item">4</span>
-                          <span class="sc_number_item">0</span>
-                          <span class="sc_number_item">0</span>
-                        </div> 
-                        faculty and staff teaching courses and discussing topics online
-                      </div>
-                      <div class="sc_testimonial_author">online Education</div>
+                    <div class="swiper-slide height_12em width_100per" data-style="width:100%;height:12em;">
+                        <div class="sc_testimonial_item">
+                            <div class="sc_testimonial_avatar">
+                                <img alt="" src="http://placehold.it/70x70"></div>
+                            <div class="sc_testimonial_content">
+                                <p>Thank you for all your help and assistance over the years with our products.
+                                    <br /> I would have no hesitation in recommending you to my clients.</p>
+                            </div>
+                            <div class="sc_testimonial_author">
+                                <a href="#">David Anderson</a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <div class="swiper-slide height_12em width_100per" data-style="width:100%;height:12em;">
+                        <div class="sc_testimonial_item">
+                            <div class="sc_testimonial_content">
+                                <div class="sc_number aligncenter margin_bottom_1_5em">
+                                    <span class="sc_number_item">4</span>
+                                    <span class="sc_number_item">0</span>
+                                    <span class="sc_number_item">0</span>
+                                </div>
+                                faculty and staff teaching courses and discussing topics online
+                            </div>
+                            <div class="sc_testimonial_author">online Education</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="sc_slider_controls_wrap">
-                  <a class="sc_slider_prev" href="#"></a>
-                  <a class="sc_slider_next" href="#"></a>
+                    <a class="sc_slider_prev" href="#"></a>
+                    <a class="sc_slider_next" href="#"></a>
                 </div>
-              </div>
-              <!-- /Testimonials section -->
             </div>
-          </div>
-        </footer>
-
-
-        <script type="text/javascript">
-                        	// $('.carousel').carousel({
-                        	// 	pause:"none"
-                        	// });
-
-
+            <!-- /Testimonials section -->
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+// $('.carousel').carousel({
+//  pause:"none"
+// });
 </script>
