@@ -3,7 +3,12 @@ define(function(require) {
 	// Dependencies
 	var Backbone = require('backbone'),
 	base = require('base'),
-	 content = $('#contentDiv');
+	 content = $('#contentDiv'),
+	 nav = $('.menu_main_nav_area ul:not(.sub-menu'),
+	 hideNav = function(userType){
+	 	nav.addClass('hide');
+	 	$('ul#'+userType).removeClass('hide');
+	 };
 
 	 themerex_ready_actions();
 
@@ -39,8 +44,7 @@ define(function(require) {
 				var view1 = new rtlView({el: content});
 				view1.render();
 				loadIndex();
-				$('.menu_main_nav_area ul').addClass('hide');
-				$('ul#guest').removeClass('hide');
+				hideNav('guest');
 			});
 		},
 		about:function(){
@@ -48,8 +52,7 @@ define(function(require) {
 				var view1 = new rtlView({el: content});
 				view1.render();				
 				loadTheme();
-				$('.menu_main_nav_area ul').addClass('hide');
-				$('ul#root').removeClass('hide');
+				hideNav('root');
 			});
 		},
 		contact:function(){
@@ -57,8 +60,7 @@ define(function(require) {
 				var view1 = new rtlView({el: content});
 				view1.render();
 				loadTheme();
-				$('.menu_main_nav_area ul').addClass('hide');
-				$('ul#admin').removeClass('hide');
+				hideNav('root');
 			});
 		},
 		tutors:function(){
@@ -66,8 +68,7 @@ define(function(require) {
 				var view1 = new rtlView({el: content});
 				view1.render();
 				loadTheme();				
-				$('.menu_main_nav_area ul').addClass('hide');
-				$('ul#tutor').removeClass('hide');
+				hideNav('root');
 			});
 		},
 		advantages:function(){
@@ -75,8 +76,7 @@ define(function(require) {
 				var view1 = new rtlView({el: content});
 				view1.render();
 				loadTheme();
-				$('.menu_main_nav_area ul').addClass('hide');
-				$('ul#guest').removeClass('hide');
+				hideNav('student');
 			});
 		},
 		login:function(){
